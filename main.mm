@@ -4,7 +4,6 @@
 #define PREF_PATH @"/Library/LaunchDaemons/com.openssh.sshd.plist"
 #define BKUP_PATH @"/Library/LaunchDaemons/com.openssh.sshd.plist.bak"
 #define SSH2_PATH @"/Library/LaunchDaemons/com.openssh.sshd.plist.swp"
-#define kPrefKey @"SockServiceName"
 
 #define FILE_PATH @"/etc/services"
 #define ORIG_PATH @"/etc/services.bak"
