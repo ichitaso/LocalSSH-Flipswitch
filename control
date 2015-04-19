@@ -1,0 +1,9 @@
+Package: com.ichitaso.localsshtoggle
+Name: LocalSSH Flipswitch
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, com.ichitaso.sshflipswitch
+Version: 0.1-1
+Architecture: iphoneos-arm
+Description: Flipswitch for third party SSH app. Will change the SSH port number to 51022.
+Maintainer: ichitaso
+Author: ichitaso
+Section: Addons (Flipswitch)

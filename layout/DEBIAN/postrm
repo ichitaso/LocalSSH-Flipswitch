@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ -e /etc/services.bak ]; then
+ mv /etc/services.bak /etc/services
+fi
+
+if [ -e /Library/LaunchDaemons/com.openssh.sshd.plist.bak ]; then
+ mv /Library/LaunchDaemons/com.openssh.sshd.plist.bak /Library/LaunchDaemons/com.openssh.sshd.plist
+fi
+
+rm -fr /etc/services.flag
+
+/bin/launchctl unload /Library/LaunchDaemons/com.openssh.sshd.plist
+/bin/launchctl load /Library/LaunchDaemons/com.openssh.sshd.plist
+
+declare -a cydia
+cydia=($CYDIA)
+if [[ ${CYDIA+@} ]]; then
+	if [[ ${cydia[1]} -lt 1 ]]; then
+		echo 'PLEASE RESTART CYDIA!'
+	else
+		eval "echo 'finish:restart' >&${cydia[0]}"
+	fi
+fi
+
+exit 0
