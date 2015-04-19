@@ -8,8 +8,8 @@ if ! [ -e /Library/LaunchDaemons/com.openssh.sshd.plist.bak ]; then
  cp /Library/LaunchDaemons/com.openssh.sshd.plist /Library/LaunchDaemons/com.openssh.sshd.plist.bak
 fi
 
-chown root:wheel /Library/Switches/LocalSSH.bundle/LocalSSHFS
-chmod 4755 /Library/Switches/LocalSSH.bundle/LocalSSHFS
+chown root:wheel /usr/bin/localssh
+chmod 4755 /usr/bin/localssh
 
 declare -a cydia
 cydia=($CYDIA)
